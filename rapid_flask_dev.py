@@ -6,15 +6,15 @@
 		and folder structure will be created by using this app -
 		/app.py
 		/templates
-			../placeholders
-			../base.html
-			../index.html
+			/placeholders
+			/base.html
+			/index.html
 		/static
-			../css
-				../main.css
-			../script
-				../index.js
-			../uploads
+			/css
+				/main.css
+			/script
+				/index.js
+			/uploads
 
 # NOTE: must be used with templates folder which contains 
         templates of index and base html 
@@ -29,11 +29,11 @@ def make_dir_structures(root=None):
     creates a dir skelton for the flask project
     this creates structure -
     /templates
-    	../placeholders
+    	/placeholders
     /static
-    	../css
-    	../script
-    	../uploads 
+    	/css
+    	/script
+    	/uploads 
     '''
     path_to_placeholders = join("templates", "placeholders")
     os.makedirs(join(root, path_to_placeholders))
@@ -49,8 +49,8 @@ def copy_templates_to_dirs(templates=None, root=None):
 	this creates structure as follows- 
 	/app.py
 	/templates
-		../base.html
-		../index.html    
+		/base.html
+		/index.html    
     '''
     cp(join(templates, "app.py"), join(root, "app.py"))
     htmls = ["base.html", "index.html"]
@@ -63,10 +63,10 @@ def touch_empty_files(root=None):
     creates empty css and js file in the static dir.
     static file structure =>
    	/static
-   		../css
-			../main.css
-		../script
-			../index.js
+   		/css
+			/main.css
+		/script
+			/index.js
     '''
     def file_maker(path=None):
         with open(path, "w") as f:

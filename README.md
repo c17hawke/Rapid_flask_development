@@ -5,15 +5,15 @@ It creates a basic folder structure to get you started quickly. Following file
 ```
 /app.py
 /templates
-	../placeholders
-	../base.html
-	../index.html
+	/placeholders
+	/base.html
+	/index.html
 /static
-	../css
-		../main.css
-	../script
-		../index.js
-	../uploads
+	/css
+		/main.css
+	/script
+		/index.js
+	/uploads
 ```
 
 The boilder plate will be created inside a folder with name in this format "FlaskApp_%Y_%m_%d-%H_%M_%S"
