@@ -32,5 +32,5 @@ http://localhost:5000/
 ![screenshot](https://github.com/c17hawke/testRepo_forblog/blob/master/hello_flask2.png?raw=true)
 
 ---
-### NOTE:
-1. If you don't see effects of css then clear your cookie and cache by pressing "CTRL + SHIFT + DELETE"
+## NOTE:
+### 1. If you don't see effects of css then clear your cache and cookies by pressing "CTRL + SHIFT + DELETE"
