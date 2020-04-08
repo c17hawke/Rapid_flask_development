@@ -2,6 +2,20 @@
 # Author: Sunny Bhaveen Chandra
 # Contact: sunny.c17hawke@gmail.com
 # Dated: March 08th, 2020
+# AIM: It creates a basic folder structure to get you started quickly. Following file 
+		and folder structure will be created by using this app -
+		/app.py
+		/templates
+			../placeholders
+			../base.html
+			../index.html
+		/static
+			../css
+				../main.css
+			../script
+				../index.js
+			../uploads
+
 # NOTE: must be used with templates folder which contains 
         templates of index and base html 
 '''
@@ -57,7 +71,6 @@ def touch_empty_files(root=None):
     def file_maker(path=None):
         with open(path, "w") as f:
             f.write("")
-            print(f"created file {path}")
 
     static_root = join(root, "static")
     files = ["css/main.css", "script/index.js"]
@@ -70,10 +83,10 @@ def touch_empty_files(root=None):
 def main():
     ROOT = time.strftime("FlaskApp_%Y_%m_%d-%H_%M_%S")
     TEMPLATES = "templateFiles"
-    # make_dir_structures - 
     make_dir_structures(root=ROOT)
     copy_templates_to_dirs(templates=TEMPLATES, root=ROOT)
     touch_empty_files(root=ROOT)
+    print(f"Successfully created flask boilerplate inside- \n{ROOT}!!")
 
 if __name__=="__main__":
     main()
