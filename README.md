@@ -2,8 +2,8 @@
 This repository contains python file and templates to create a boiler plate for a new flask app. 
 The boilder plate will be created inside a folder with name in this format "FlaskApp_%Y_%m_%d-%H_%M_%S"
 
-## Steps to use this- 
-### 1. Clone this repository using following command- 
+## Instructions to use this script- 
+### 1. Open your terminal or command prompt and clone this repository using the following command- 
 ```
 git clone https://github.com/c17hawke/Rapid_flask_development
 ```
@@ -16,7 +16,7 @@ python rapid_flask_dev.py
 ```
 ### 4. "cd" into the folder named in this format "FlaskApp_2020_04_08-06_34_37"
 
-### 5. Now you can run app.py by following command-
+### 5. Make sure you are in your flask app virtual environment or you have atleast installed flask. And now you can run app.py by following command-
 ```
 python app.py
 ```
