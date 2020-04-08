@@ -1,5 +1,21 @@
 # [Rapid_flask_development](https://c17hawke.github.io/Rapid_flask_development/)
 This repository contains python file and templates to create a boiler plate for a new flask app. 
+It creates a basic folder structure to get you started quickly. Following file 
+		and folder structure will be created by using this app -
+```
+/app.py
+/templates
+	../placeholders
+	../base.html
+	../index.html
+/static
+	../css
+		../main.css
+	../script
+		../index.js
+	../uploads
+```
+
 The boilder plate will be created inside a folder with name in this format "FlaskApp_%Y_%m_%d-%H_%M_%S"
 
 ## Instructions to use this script- 
