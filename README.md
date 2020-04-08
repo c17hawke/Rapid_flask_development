@@ -33,4 +33,4 @@ http://localhost:5000/
 
 ---
 ## NOTE:
-**1. If you don't see effects of css then clear your cache and cookies by pressing "CTRL + SHIFT + DELETE" **
+**1. If you don't see effects of css then clear your cache and cookies by pressing "CTRL + SHIFT + DELETE"**
