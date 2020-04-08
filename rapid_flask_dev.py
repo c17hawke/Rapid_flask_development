@@ -1,50 +1,71 @@
 '''
 # Author: Sunny Bhaveen Chandra
 # Contact: sunny.c17hawke@gmail.com
-# dated: March 08th, 2020
+# Dated: March 08th, 2020
 # NOTE: must be used with templates folder which contains 
         templates of index and base html 
 '''
 import os
+from os.path import join
 from shutil import copyfile as cp
 import time
-
-def path_maker(p1=None, p2=None):
-    return os.path.join(p1, p2)
 
 def make_dir_structures(root=None):
     '''
     creates a dir skelton for the flask project
+    this creates structure -
+    /templates
+    	../placeholders
+    /static
+    	../css
+    	../script
+    	../uploads 
     '''
-    os.makedirs(path_maker(root, "templates/placeholders"))
+    path_to_placeholders = join("templates", "placeholders")
+    os.makedirs(join(root, path_to_placeholders))
     static_dirs = ["css", "script", "uploads"]
     for static_dir in static_dirs:
-        os.makedirs(path_maker(root, f"static/{static_dir}"))
+    	temp_path = join("static", static_dir)
+    	os.makedirs(join(root, temp_path))
 
 def copy_templates_to_dirs(templates=None, root=None):
     '''
-    copies html templates to the template directory 
+    copies html templates to the templates directory 
     in root from templates
+	this creates structure as follows- 
+	/app.py
+	/templates
+		../base.html
+		../index.html    
     '''
-    cp(path_maker(templates, "app.py"), path_maker(root, "app.py"))
+    cp(join(templates, "app.py"), join(root, "app.py"))
     htmls = ["base.html", "index.html"]
     for html in htmls:
-        cp(path_maker(templates, html), path_maker(root, f"templates/{html}"))
+    	temp_path = join("templates", html)
+    	cp(join(templates, html), join(root, temp_path))
     
 def touch_empty_files(root=None):
     '''
-    creates empty css and js file in the static dir
+    creates empty css and js file in the static dir.
+    static file structure =>
+   	/static
+   		../css
+			../main.css
+		../script
+			../index.js
     '''
     def file_maker(path=None):
         with open(path, "w") as f:
             f.write("")
             print(f"created file {path}")
 
-    static_root = path_maker(root, "static")
+    static_root = join(root, "static")
     files = ["css/main.css", "script/index.js"]
     for file in files:
-        path = path_maker(static_root, file)
-        file_maker(path)
+    	dir_, file_ =  file.split("/")
+    	path_to_file = join(dir_, file_)
+    	path = join(static_root, path_to_file)
+    	file_maker(path)
 
 def main():
     ROOT = time.strftime("FlaskApp_%Y_%m_%d-%H_%M_%S")
