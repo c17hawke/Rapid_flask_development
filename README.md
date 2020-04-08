@@ -29,7 +29,7 @@ or
 http://localhost:5000/
 ```
 ### 7. Now if you see the following output in your browser that means your boilerplate is ready and now you can edit your app files as per your requirement
-![screenshot](https://github.com/c17hawke/testRepo_forblog/blob/master/hello_flask.png?raw=true)
+![screenshot](https://github.com/c17hawke/testRepo_forblog/blob/master/hello_flask2.png?raw=true)
 
 ---
 ### NOTE:
